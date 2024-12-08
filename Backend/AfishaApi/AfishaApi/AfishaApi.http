@@ -1,0 +1,6 @@
+@AfishaApi_HostAddress = http://localhost:5155
+
+GET {{AfishaApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
