@@ -1,58 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\controllers\\enterpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\controllers\\enterpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\controllers\\enterpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\data\\userentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\data\\userentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\contracts\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\contracts\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\contracts\\authorizationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\contracts\\authorizationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\contracts\\enterpageresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\contracts\\enterpageresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\contracts\\enterpageresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\afishaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\afishaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\models\\authrequestdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\models\\authrequestdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\varvara\\afisha\\backend\\afishaapi\\afishaapi\\afishaapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\afishaapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\data\\userentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\data\\userentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,171 +54,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserEntityDb.cs",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\UserEntityDb.cs",
-              "RelativeDocumentMoniker": "AfishaApi\\Data\\UserEntityDb.cs",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\UserEntityDb.cs",
-              "RelativeToolTip": "AfishaApi\\Data\\UserEntityDb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "EnterPageResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\EnterPageResponseDto.cs",
+              "RelativeDocumentMoniker": "AfishaApi\\Contracts\\EnterPageResponseDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\EnterPageResponseDto.cs",
+              "RelativeToolTip": "AfishaApi\\Contracts\\EnterPageResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T17:08:54.208Z",
+              "WhenOpened": "2024-12-08T13:16:50.087Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "AfishaApi\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\appsettings.Development.json",
-              "RelativeToolTip": "AfishaApi\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-01T16:43:34.486Z",
+              "DocumentIndex": 3,
+              "Title": "UserEntityDb.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\UserEntityDb.cs",
+              "RelativeDocumentMoniker": "AfishaApi\\Data\\UserEntityDb.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\UserEntityDb.cs",
+              "RelativeToolTip": "AfishaApi\\Data\\UserEntityDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T13:16:20.735Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EnterPageController.cs",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\EnterPageController.cs",
-              "RelativeDocumentMoniker": "AfishaApi\\Controllers\\EnterPageController.cs",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\EnterPageController.cs",
-              "RelativeToolTip": "AfishaApi\\Controllers\\EnterPageController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCkAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T18:14:13.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EnterPageResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\EnterPageResponseDto.cs",
-              "RelativeDocumentMoniker": "AfishaApi\\Contracts\\EnterPageResponseDto.cs",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\EnterPageResponseDto.cs",
-              "RelativeToolTip": "AfishaApi\\Contracts\\EnterPageResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T19:59:01.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegisterRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\RegisterRequestDto.cs",
-              "RelativeDocumentMoniker": "AfishaApi\\Contracts\\RegisterRequestDto.cs",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\RegisterRequestDto.cs",
-              "RelativeToolTip": "AfishaApi\\Contracts\\RegisterRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T18:13:52.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\AppDbContext.cs",
               "RelativeToolTip": "AfishaApi\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T18:57:53.398Z",
+              "WhenOpened": "2024-12-08T13:15:50.136Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Program.cs",
-              "RelativeDocumentMoniker": "AfishaApi\\Program.cs",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Program.cs",
-              "RelativeToolTip": "AfishaApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EnterPageController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\EnterPageController.cs",
+              "RelativeDocumentMoniker": "AfishaApi\\Controllers\\EnterPageController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\EnterPageController.cs*",
+              "RelativeToolTip": "AfishaApi\\Controllers\\EnterPageController.cs*",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAiwGoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T18:13:54.522Z",
+              "WhenOpened": "2024-12-08T13:01:55.286Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthorizationRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\AuthorizationRequestDto.cs",
-              "RelativeDocumentMoniker": "AfishaApi\\Contracts\\AuthorizationRequestDto.cs",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\AuthorizationRequestDto.cs",
-              "RelativeToolTip": "AfishaApi\\Contracts\\AuthorizationRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T20:13:02.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "AfishaApi\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Properties\\launchSettings.json",
-              "RelativeToolTip": "AfishaApi\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-28T18:14:54.752Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthRequestDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Models\\AuthRequestDtoValidator.cs",
-              "RelativeDocumentMoniker": "AfishaApi\\Models\\AuthRequestDtoValidator.cs",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Models\\AuthRequestDtoValidator.cs",
-              "RelativeToolTip": "AfishaApi\\Models\\AuthRequestDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T19:41:25.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\appsettings.json",
-              "RelativeDocumentMoniker": "AfishaApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\appsettings.json",
-              "RelativeToolTip": "AfishaApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-01T16:43:36.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AfishaApi.csproj",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
-              "RelativeDocumentMoniker": "AfishaApi\\AfishaApi.csproj",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
-              "RelativeToolTip": "AfishaApi\\AfishaApi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-28T18:57:25.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AfishaApi.http",
-              "DocumentMoniker": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.http",
-              "RelativeDocumentMoniker": "AfishaApi\\AfishaApi.http",
-              "ToolTip": "C:\\Users\\Varvara\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.http",
-              "RelativeToolTip": "AfishaApi\\AfishaApi.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-11-28T21:37:39.856Z"
             }
           ]
         }

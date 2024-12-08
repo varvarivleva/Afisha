@@ -2,7 +2,7 @@
   {
     "ContainingType": "AfishaApi.Controllers.EnterPageController",
     "Method": "AuthAsync",
-    "RelativePath": "api/enter_page/authorizaton",
+    "RelativePath": "api/enter_page/authorization",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

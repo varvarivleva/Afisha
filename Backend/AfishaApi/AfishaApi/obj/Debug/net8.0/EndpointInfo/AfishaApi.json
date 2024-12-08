@@ -76,7 +76,7 @@
         }
       }
     },
-    "/api/enter_page/authorizaton": {
+    "/api/enter_page/authorization": {
       "post": {
         "tags": [
           "EnterPage"
@@ -172,6 +172,10 @@
             "format": "int32"
           },
           "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
             "type": "string",
             "nullable": true
           }
