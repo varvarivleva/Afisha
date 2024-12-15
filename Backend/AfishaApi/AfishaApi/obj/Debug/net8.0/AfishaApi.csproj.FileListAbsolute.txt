@@ -275,7 +275,6 @@ C:\Users\user\Source\Repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\s
 C:\Users\user\Source\Repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AfishaApi.props
 C:\Users\user\Source\Repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AfishaApi.props
 C:\Users\user\Source\Repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\user\Source\Repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\user\Source\Repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\AfishaApi.csproj.Up2Date
 C:\Users\user\Source\Repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\AfishaApi.dll
 C:\Users\user\Source\Repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\refint\AfishaApi.dll
@@ -285,3 +284,6 @@ C:\Users\user\Source\Repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\r
 C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

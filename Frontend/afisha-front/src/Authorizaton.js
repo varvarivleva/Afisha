@@ -7,30 +7,26 @@ const Authorization = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:7005/api/enter_page/authorization', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password }), // Убрала email
-            });
+    const response = await fetch('http://localhost:7005/api/enter_page/authorization', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+    });
 
-            if (response.status === 400) { // Исправлено
-                const errorData = await response.json();
-                throw new Error('Должны быть заполнены все поля');
-            }
+    if (!response.ok) {
+        console.error('Response error:', response.status);
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Server error');
+    }
 
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.message || 'Ошибка сервера');
-            }
+    const data = await response.json();
+    console.log('Success:', data);
+} catch (error) {
+    console.error('Network or server error:', error.message);
+}
 
-            const data = await response.json();
-            console.log(data);
-
-        } catch (error) {
-            console.error('Error during fetch:', error);
-        }
     };
 
     return (

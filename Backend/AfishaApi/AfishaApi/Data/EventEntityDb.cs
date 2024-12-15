@@ -1,6 +1,7 @@
 ﻿public class EventEntityDb
 {
     public Guid Id { get; set; }
+    public Guid OrganizatorId {  get; set; } 
     public string Title { get; set; }
     public string Description { get; set; }
     public DateTime EventTime { get; set; }

@@ -98,6 +98,19 @@ builder.Services.AddSwaggerGen(c =>
 });
 #endregion
 
+#region CORS support
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:3000")
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
+#endregion
+
 #region HTTP requests
 // Конфигурация конвейера обработки HTTP-запросов
 var app = builder.Build();
@@ -108,6 +121,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AfishaApi V1"));
 }
+
+app.UseRouting();
+
+app.UseCors("AllowLocalhost");
 
 app.UseHttpsRedirection();
 app.UseAuthentication(); // Это должно быть ДО UseAuthorization

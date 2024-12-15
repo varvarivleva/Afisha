@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AfishaApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f88692a94bb50186bf9d84ba9e58445b7760782")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c424a41d67e62fefdf505bc339c4234a496ff4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AfishaApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AfishaApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

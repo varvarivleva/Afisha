@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Source\\Repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj": {}
+    "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Source\\Repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj": {
+    "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
         "projectName": "AfishaApi",
-        "projectPath": "C:\\Users\\user\\Source\\Repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\obj\\",
         "projectStyle": "PackageReference",
@@ -58,6 +58,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

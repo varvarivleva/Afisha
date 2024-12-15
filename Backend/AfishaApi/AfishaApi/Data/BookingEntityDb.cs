@@ -8,4 +8,6 @@
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Phone { get; set; }
+
+    public virtual EventEntityDb Event { get; set; }
 }
