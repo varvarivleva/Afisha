@@ -5,10 +5,12 @@ using AfishaApi.Contracts;
 using AfishaApi.Models;
 using AfishaApi.Data;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 namespace AfishaApi.Controllers
 {
+    [Authorize] // Требуется авторизация для всех методов
     [ApiController]
     [Route("api/event_card")]
     public class EventCardController : ControllerBase
@@ -20,12 +22,18 @@ namespace AfishaApi.Controllers
             _context = context;
         }
 
-        // Показ карточки события
         [HttpGet("show_info/{eventId}")]
-        [ProducesResponseType<EventInfoDto>(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(EventInfoDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)] // Добавляем 401
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> ShowInfo(Guid eventId)
         {
+            if (eventId == null)
+            {
+                return BadRequest(new { Message = "No eventId." });
+            }
             var eventInfo = await _context.Events.FindAsync(eventId);
             if (eventInfo == null)
             {
@@ -42,10 +50,11 @@ namespace AfishaApi.Controllers
             });
         }
 
-        // Создание карточки события
         [HttpPost("create_event")]
-        [ProducesResponseType<EventResponseDto>(StatusCodes.Status200OK)]
-        [ProducesResponseType<EventResponseDto>(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(EventResponseDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)] // Добавляем 401
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> CreateEvent([FromBody] CreateEventDto request)
         {
             if (string.IsNullOrWhiteSpace(request.Title) ||
@@ -75,10 +84,12 @@ namespace AfishaApi.Controllers
             return Ok(new EventResponseDto { Message = "Event created successfully." });
         }
 
-        // Бронирование места на событие
         [HttpPost("booking")]
-        [ProducesResponseType<BookingResponseDto>(StatusCodes.Status200OK)]
-        [ProducesResponseType<BookingResponseDto>(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BookingResponseDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)] // Добавляем 401
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Booking([FromBody] BookingRequestDto request)
         {
             if (string.IsNullOrWhiteSpace(request.FirstName) ||
@@ -92,13 +103,13 @@ namespace AfishaApi.Controllers
             var eventInfo = await _context.Events.FindAsync(request.EventId);
             if (eventInfo == null || eventInfo.TicketsAvailable <= 0)
             {
-                return BadRequest(new { Message = "Event not found or no tickets available." });
+                return NotFound(new { Message = "Event not found or no tickets available." });
             }
 
             var booking = new BookingEntityDb
             {
                 Id = Guid.NewGuid(),
-                UserId = request.UserId, // Предполагается, что UserId передается в запросе
+                UserId = request.UserId,
                 EventId = request.EventId,
                 BookingTime = DateTime.Now,
                 Status = "success",
@@ -107,7 +118,7 @@ namespace AfishaApi.Controllers
                 Phone = request.Phone
             };
 
-            eventInfo.TicketsAvailable -= 1; // Уменьшаем количество доступных мест
+            eventInfo.TicketsAvailable -= 1;
             _context.Events.Update(eventInfo);
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();

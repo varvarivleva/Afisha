@@ -11,6 +11,8 @@ namespace AfishaApi.Data
 
         // DbSet для пользователей
         public DbSet<UserEntityDb> Users { get; set; }
+        public DbSet<BookingEntityDb> Bookings { get; set; }
+        public DbSet<EventEntityDb> Events { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

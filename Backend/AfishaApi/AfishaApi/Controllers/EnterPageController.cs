@@ -95,14 +95,18 @@ namespace AfishaApi.Controllers
         {
             var claims = new[]
             {
-        new Claim(JwtRegisteredClaimNames.Sub, user.Username),
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        new Claim("id", user.Id.ToString())
-    };
+                new Claim(JwtRegisteredClaimNames.Sub, user.Username),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim("id", user.Id.ToString())
+            };
 
-            // Обеспечьте, чтобы ключ был не менее 256 бит (32 байта)
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("your_super_secret_key")); // Убедитесь, что длина ключа минимум 32 символа
-            var creds = new SigningCredentials(key, SecurityAlgorithms.Aes128CbcHmacSha256);
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("32_characters_long_super_secret_key"));
+            if (key.KeySize < 256)
+            {
+                throw new ArgumentException("Key length must be at least 256 bits (32 characters).");
+            }
+
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
                 issuer: "your_issuer",
@@ -113,6 +117,5 @@ namespace AfishaApi.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
     }
 }
