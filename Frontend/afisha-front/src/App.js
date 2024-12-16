@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import EnterPageRegister from './EnterPage';
 import Authorization from './Authorizaton.js';
+import './App.css';
+import './EnterPage.css'; // Импорт стилей
 
 function App() {
     return (
