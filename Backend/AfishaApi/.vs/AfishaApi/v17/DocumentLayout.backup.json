@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\controllers\\eventcardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\controllers\\eventcardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\controllers\\mainpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\controllers\\mainpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\controllers\\enterpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\controllers\\enterpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\contracts\\bookingresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\contracts\\bookingresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\controllers\\eventcardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\controllers\\eventcardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\contracts\\bookingrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\contracts\\bookingrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\data\\bookingentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\data\\bookingentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\controllers\\enterpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\controllers\\enterpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,10 +83,6 @@
       "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\data\\bookingentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\data\\bookingentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|c:\\users\\user\\source\\repos\\afisha\\backend\\afishaapi\\afishaapi\\data\\userentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFE9F9DC-E1E5-43AC-B34C-88291C7A5286}|AfishaApi\\AfishaApi.csproj|solutionrelative:afishaapi\\data\\userentitydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -94,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,32 +130,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "AfishaApi\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Properties\\launchSettings.json",
-              "RelativeToolTip": "AfishaApi\\Properties\\launchSettings.json",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAwBoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-16T17:20:18.601Z"
+              "DocumentIndex": 2,
+              "Title": "BookingResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\BookingResponseDto.cs",
+              "RelativeDocumentMoniker": "AfishaApi\\Contracts\\BookingResponseDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\BookingResponseDto.cs",
+              "RelativeToolTip": "AfishaApi\\Contracts\\BookingResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T13:30:51.677Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "BookingRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\BookingRequestDto.cs",
+              "RelativeDocumentMoniker": "AfishaApi\\Contracts\\BookingRequestDto.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\BookingRequestDto.cs",
+              "RelativeToolTip": "AfishaApi\\Contracts\\BookingRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T13:30:35.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainPageController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\MainPageController.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Controllers\\MainPageController.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\MainPageController.cs",
               "RelativeToolTip": "AfishaApi\\Controllers\\MainPageController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwA0AAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T10:27:04.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AfishaApi.http",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.http",
               "RelativeDocumentMoniker": "AfishaApi\\AfishaApi.http",
@@ -159,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Program.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Program.cs",
@@ -171,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "EnterPageController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\EnterPageController.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Controllers\\EnterPageController.cs",
@@ -183,19 +205,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "EventCardController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\EventCardController.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Controllers\\EventCardController.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\EventCardController.cs",
               "RelativeToolTip": "AfishaApi\\Controllers\\EventCardController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAkwHgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T15:35:59.535Z"
+              "WhenOpened": "2024-12-15T15:35:59.535Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "AfishaApi",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
               "RelativeDocumentMoniker": "AfishaApi\\AfishaApi.csproj",
@@ -206,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "AfishaApi.csproj",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
               "RelativeDocumentMoniker": "AfishaApi\\AfishaApi.csproj",
@@ -218,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "dotnet",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\dotnet",
               "RelativeDocumentMoniker": "AfishaApi\\dotnet",
@@ -230,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\appsettings.json",
               "RelativeDocumentMoniker": "AfishaApi\\appsettings.json",
@@ -242,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "u.Id)",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\u.Id)",
               "RelativeDocumentMoniker": "AfishaApi\\u.Id)",
@@ -254,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "SwaggerAuthFilter.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Models\\SwaggerAuthFilter.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Models\\SwaggerAuthFilter.cs",
@@ -266,7 +289,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
+              "Title": "BookingEntityDb.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\BookingEntityDb.cs",
+              "RelativeDocumentMoniker": "AfishaApi\\Data\\BookingEntityDb.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\BookingEntityDb.cs",
+              "RelativeToolTip": "AfishaApi\\Data\\BookingEntityDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:31:13.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "AfishaApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "AfishaApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwBoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-16T17:20:18.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\appsettings.Development.json",
               "RelativeDocumentMoniker": "AfishaApi\\appsettings.Development.json",
@@ -278,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Data\\AppDbContext.cs",
@@ -290,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ShowAllEventsDto.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\ShowAllEventsDto.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Contracts\\ShowAllEventsDto.cs",
@@ -302,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "BookingEventDto.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\BookingEventDto.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Contracts\\BookingEventDto.cs",
@@ -314,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "MyEventsController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Controllers\\MyEventsController.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Controllers\\MyEventsController.cs",
@@ -326,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "EventEntityDb.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\EventEntityDb.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Data\\EventEntityDb.cs",
@@ -338,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "UserEntityDb.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\UserEntityDb.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Data\\UserEntityDb.cs",
@@ -350,19 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "BookingEntityDb.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\BookingEntityDb.cs",
-              "RelativeDocumentMoniker": "AfishaApi\\Data\\BookingEntityDb.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Data\\BookingEntityDb.cs",
-              "RelativeToolTip": "AfishaApi\\Data\\BookingEntityDb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:31:13.789Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "OrganizationEventDto.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\Contracts\\OrganizationEventDto.cs",
               "RelativeDocumentMoniker": "AfishaApi\\Contracts\\OrganizationEventDto.cs",

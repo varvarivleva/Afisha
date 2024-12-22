@@ -11,7 +11,7 @@ using AfishaApi.Data;
 
 namespace AfishaApi.Controllers
 {
-    //[Authorize] // Требуется авторизация для всех методов
+    [Authorize] // Требуется авторизация для всех методов
     [ApiController]
     [Route("api/main_page")]
     public class MainPageController : ControllerBase
@@ -34,11 +34,11 @@ namespace AfishaApi.Controllers
         {
             try
             {
-                //var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id");
-                //if (userIdClaim == null)
-                //{
-                //    return Unauthorized(new { Message = "User ID not found in token." });
-                //}
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id");
+                if (userIdClaim == null)
+                {
+                    return Unauthorized(new { Message = "User ID not found in token." });
+                }
 
                 // Получить текущую дату и время
                 var currentDateTime = DateTime.UtcNow;

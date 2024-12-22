@@ -76,7 +76,7 @@ const EnterPageRegister = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
-                    <button type="submit" className="register-button">
+                    <button type="submit" className="register-button" onClick={handleSignIn}>
                         Зарегистрироваться
                     </button>
                 </form>

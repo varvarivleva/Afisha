@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 import './MainPage.css';
 
 const MainPage = () => {
@@ -7,11 +8,22 @@ const MainPage = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
+    const { token, logout } = useAuth(); // Используем токен и функцию выхода
 
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('http://localhost:8080/api/main_page/show_events');
+                const response = await fetch('http://localhost:8080/api/main_page/show_events', {
+                    headers: {
+                        Authorization: `Bearer ${token}`, // Добавляем заголовок авторизации
+                    },
+                });
+
+                if (response.status === 401) {
+                    logout(); // Выход при ошибке авторизации
+                    return;
+                }
+
                 if (!response.ok) {
                     throw new Error('Ошибка при загрузке событий');
                 }
@@ -42,7 +54,7 @@ const MainPage = () => {
         };
 
         fetchEvents();
-    }, []);
+    }, [token, logout]);
 
     const handleEventClick = (eventId) => {
         navigate(`/event_card/${eventId}`);
@@ -54,7 +66,7 @@ const MainPage = () => {
                 <button onClick={() => navigate('/my_bookings')}>Я посещаю</button>
                 <button onClick={() => navigate('/my_events')}>Я организую</button>
                 <button onClick={() => navigate('/create_event')}>+Создать событие</button>
-                <button onClick={() => navigate('/account')}>Акк</button>
+                <button onClick={logout}>Выйти</button> {/* Кнопка выхода */}
             </div>
             <div className="main-content">
                 <h1>ХАЙП НАЧИНАЕТСЯ ЗДЕСЬ! РЕГИСТРИРУЙТЕСЬ НА СОБЫТИЯ И БУДЬТЕ ХАЙПОРОЖАМИ</h1>

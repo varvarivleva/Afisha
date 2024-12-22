@@ -1,0 +1,76 @@
+.event-organization-page {
+    background-color: #fff4c3;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.header {
+    background-color: #a8e6cf;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-buttons button {
+    background-color: #00c4cc;
+    border: 1px solid #000;
+    color: #000;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.header-buttons button:hover {
+    background-color: #008b8b;
+    color: #fff;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.main-content h1 {
+    margin-bottom: 20px;
+}
+
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.events-table th, .events-table td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+}
+
+.events-table th {
+    background-color: #00c4cc;
+    color: #000;
+}
+
+.events-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.event-link {
+    background-color: #00c4cc;
+    border: 1px solid #000;
+    color: #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.event-link:hover {
+    background-color: #008b8b;
+    color: #fff;
+}

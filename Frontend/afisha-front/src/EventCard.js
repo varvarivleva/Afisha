@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 import './EventCard.css';
 
 const EventCard = () => {
@@ -15,11 +16,19 @@ const EventCard = () => {
     });
 
     const navigate = useNavigate();
+    const { token, logout } = useAuth();
 
     useEffect(() => {
         const fetchEventInfo = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/event_card/show_info/${eventId}`);
+                const response = await fetch(`http://localhost:8080/api/event_card/show_info/${eventId}`, {
+                    headers: { Authorization: `Bearer ${token}` },
+                });
+
+                if (response.status === 401) {
+                    logout();
+                }
+
                 if (!response.ok) {
                     throw new Error('Ошибка при загрузке информации о событии');
                 }
@@ -44,7 +53,7 @@ const EventCard = () => {
         };
 
         fetchEventInfo();
-    }, [eventId]);
+    }, [eventId, token, logout]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -60,6 +69,7 @@ const EventCard = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
                 },
                 body: JSON.stringify({
                     eventId,
@@ -69,6 +79,11 @@ const EventCard = () => {
                     tickets: formData.tickets,
                 }),
             });
+
+            if (response.status === 401) {
+                logout();
+                return;
+            }
 
             if (!response.ok) {
                 throw new Error('Ошибка бронирования билета');
@@ -91,7 +106,7 @@ const EventCard = () => {
                 <button onClick={() => navigate('/my_bookings')}>Я посещаю</button>
                 <button onClick={() => navigate('/my_events')}>Я организую</button>
                 <button onClick={() => navigate('/create_event')}>+Создать событие</button>
-                <button onClick={() => navigate('/account')}>Акк</button>
+                <button onClick={() => logout()}>Выйти</button>
             </div>
             <div className="event-details">
                 <h1>{event.title}</h1>

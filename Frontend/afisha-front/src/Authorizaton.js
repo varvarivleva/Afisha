@@ -1,16 +1,18 @@
 ﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Authorization.css'; // Подключаем CSS для стилизации
+import { useAuth } from './AuthContext';
+import './Authorization.css';
 
 const Authorization = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState(''); // Состояние для хранения сообщения об ошибке
+    const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
+    const { login } = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setErrorMessage(''); // Сбрасываем сообщение об ошибке перед новым запросом
+        setErrorMessage('');
 
         try {
             const response = await fetch('http://localhost:8080/api/enter_page/authorization', {
@@ -19,47 +21,24 @@ const Authorization = () => {
                 body: JSON.stringify({ username, password }),
             });
 
-            const responseData = await response.json(); // Получаем тело ответа
-
-            // Обработка ошибок 400
-            if (response.status === 400 && responseData.message === 'All fields are required') {
-                throw new Error('400: Не все поля заполнены');
-            }
-
-            if (response.status === 400 && responseData.message === 'Invalid username') {
-                throw new Error('400: Такого пользователя не существует');
-            }
-
-            if (response.status === 400 && responseData.message === 'Invalid password') {
-                throw new Error('400: Неверный пароль');
-            }
-
-            // Обработка ошибки 500
-            if (response.status === 500) {
-                throw new Error('500: Ошибка сервера, повторите попытку позже');
-            }
+            const responseData = await response.json();
 
             if (!response.ok) {
-                throw new Error(responseData.message || 'Ошибка сервера');
+                throw new Error(responseData.message || 'Ошибка авторизации');
             }
 
-            console.log('Успешная авторизация:', responseData);
+            login(responseData.token); // Сохраняем токен в контекст
             navigate('/main_page');
         } catch (error) {
-            console.error('Ошибка авторизации:', error.message);
-            setErrorMessage(error.message); // Устанавливаем сообщение об ошибке
+            setErrorMessage(error.message);
         }
     };
 
     return (
         <div className="auth-container">
-            {errorMessage && ( // Показываем сообщение об ошибке
-                <div className="error-popup">
-                    {errorMessage}
-                </div>
-            )}
+            {errorMessage && <div className="error-popup">{errorMessage}</div>}
             <div className="auth-card">
-                <h2>Авторизация</h2> {/* Заголовок страницы */}
+                <h2>Авторизация</h2>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
