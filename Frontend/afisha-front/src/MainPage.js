@@ -45,7 +45,7 @@ const MainPage = () => {
     }, []);
 
     const handleEventClick = (eventId) => {
-        navigate(`/event/${eventId}`);
+        navigate(`/event_card/${eventId}`);
     };
 
     return (
@@ -77,7 +77,7 @@ const MainPage = () => {
                     ) : (
                         !loading &&
                         !error && (
-                            <p className="no-events">������� ���� ���. ������ ������, ��� ������� ���!</p>
+                            <p className="no-events">Событий пока нет. Будь первым, кто создат его!</p>
                         )
                     )}
                 </div>

@@ -1,16 +1,16 @@
-/* Основной фон страницы */
+/* РћСЃРЅРѕРІРЅРѕР№ С„РѕРЅ СЃС‚СЂР°РЅРёС†С‹ */
 .main-page {
-    background-color: #fff7b3; /* Желтый фон */
+    background-color: #fff7b3; /* Р–РµР»С‚С‹Р№ С„РѕРЅ */
     min-height: 100vh;
     font-family: Arial, sans-serif;
 }
 
-/* Верхняя плашка */
+/* Р’РµСЂС…РЅСЏСЏ РїР»Р°С€РєР° */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #b3ffd9; /* Зеленая плашка */
+    background-color: #b3ffd9; /* Р—РµР»РµРЅР°СЏ РїР»Р°С€РєР° */
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
@@ -19,7 +19,7 @@
 }
 
     .header button {
-        background-color: #add8e6; /* Голубые кнопки */
+        background-color: #add8e6; /* Р“РѕР»СѓР±С‹Рµ РєРЅРѕРїРєРё */
         color: black;
         border: none;
         border-radius: 5px;
@@ -30,13 +30,13 @@
     }
 
         .header button:hover {
-            background-color: #87ceeb; /* Более насыщенный голубой при наведении */
+            background-color: #87ceeb; /* Р‘РѕР»РµРµ РЅР°СЃС‹С‰РµРЅРЅС‹Р№ РіРѕР»СѓР±РѕР№ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
         }
 
-/* Основное содержимое */
+/* РћСЃРЅРѕРІРЅРѕРµ СЃРѕРґРµСЂР¶РёРјРѕРµ */
 .main-content {
     padding: 100px 20px 20px;
-    text-align: center;
+    text-align: left;
 }
 
     .main-content h1 {
@@ -46,15 +46,15 @@
         margin-bottom: 20px;
     }
 
-/* Список событий */
+/* РЎРїРёСЃРѕРє СЃРѕР±С‹С‚РёР№ */
 .events-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     gap: 20px;
 }
 
-/* Карточка события */
+/* РљР°СЂС‚РѕС‡РєР° СЃРѕР±С‹С‚РёСЏ */
 .event-card {
     background-color: white;
     border-radius: 10px;
@@ -104,7 +104,7 @@
         font-weight: bold;
     }
 
-/* Если событий нет */
+/* Р•СЃР»Рё СЃРѕР±С‹С‚РёР№ РЅРµС‚ */
 .no-events {
     font-size: 18px;
     color: gray;

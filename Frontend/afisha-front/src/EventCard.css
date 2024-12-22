@@ -1,0 +1,83 @@
+/* Основная страница */
+.event-card-page {
+    font-family: Arial, sans-serif;
+}
+
+/* Верхняя панель */
+.header {
+    background-color: #b3e6cc;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header button {
+    background-color: #66d9e8;
+    color: black;
+    border: none;
+    margin-left: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.header button:hover {
+    background-color: #4cb8c4;
+}
+
+/* Блок информации о событии */
+.event-details {
+    background-color: #fff2cc;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-details h1 {
+    color: black;
+    font-size: 36px;
+}
+
+.event-details .event-description {
+    color: black;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Форма регистрации */
+.registration-form {
+    background-color: #fff2cc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    text-align: center;
+}
+
+.registration-form h2 {
+    color: black;
+}
+
+.registration-form form label {
+    display: block;
+    margin: 10px 0;
+    color: black;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.registration-form button {
+    background-color: #66d9e8;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.registration-form button:hover {
+    background-color: #4cb8c4;
+}

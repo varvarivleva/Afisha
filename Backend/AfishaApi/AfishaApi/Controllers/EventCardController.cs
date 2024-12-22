@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AfishaApi.Controllers
 {
-    [Authorize] // Требуется авторизация для всех методов
+    //[Authorize] // Требуется авторизация для всех методов
     [ApiController]
     [Route("api/event_card")]
     public class EventCardController : ControllerBase
