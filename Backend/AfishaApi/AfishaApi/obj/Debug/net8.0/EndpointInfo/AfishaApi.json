@@ -713,10 +713,6 @@
       "BookingRequestDto": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
           "eventId": {
             "type": "string",
             "format": "uuid"

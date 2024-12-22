@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ymhFN/H8iak=",
+  "dgSpecHash": "yghDp3ELEEM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
+  "projectFilePath": "C:\\Users\\user\\Source\\Repos\\Afisha\\Backend\\AfishaApi\\AfishaApi\\AfishaApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

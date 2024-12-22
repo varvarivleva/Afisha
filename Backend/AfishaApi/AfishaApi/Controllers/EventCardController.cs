@@ -67,9 +67,16 @@ namespace AfishaApi.Controllers
                 return BadRequest(new { Message = "All fields are required." });
             }
 
+            var organizatorIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id"); // Предполагается, что токен содержит claim с типом "id"
+            if (organizatorIdClaim == null || !Guid.TryParse(organizatorIdClaim.Value, out var organizatorId))
+            {
+                return Unauthorized(new { Message = "Invalid token or organizator ID not found." });
+            }
+
             var newEvent = new EventEntityDb
             {
                 Id = Guid.NewGuid(),
+                OrganizatorId = organizatorId,
                 Title = request.Title,
                 Description = request.Description,
                 EventTime = request.EventTime,
@@ -106,12 +113,18 @@ namespace AfishaApi.Controllers
                 return NotFound(new { Message = "Event not found or no tickets available." });
             }
 
+            var uesrIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id"); // Предполагается, что токен содержит claim с типом "id"
+            if (uesrIdClaim == null || !Guid.TryParse(uesrIdClaim.Value, out var userId))
+            {
+                return Unauthorized(new { Message = "Invalid token or organizator ID not found." });
+            }
+
             var booking = new BookingEntityDb
             {
                 Id = Guid.NewGuid(),
-                UserId = request.UserId,
+                UserId = userId,
                 EventId = request.EventId,
-                BookingTime = DateTime.Now,
+                BookingTime = DateTime.UtcNow,
                 Status = "success",
                 FirstName = request.FirstName,
                 LastName = request.LastName,
