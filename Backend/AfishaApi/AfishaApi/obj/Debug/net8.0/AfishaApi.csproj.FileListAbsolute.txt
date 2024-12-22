@@ -286,4 +286,3 @@ C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\bin\Debug\net8.0\M
 C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
-C:\Users\user\source\repos\Afisha\Backend\AfishaApi\AfishaApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

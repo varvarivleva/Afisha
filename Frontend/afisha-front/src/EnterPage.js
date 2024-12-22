@@ -14,7 +14,7 @@ const EnterPageRegister = () => {
         setErrorMessage(''); // Сбрасываем сообщение об ошибке перед новым запросом
 
         try {
-            const response = await fetch('http://localhost:5000/api/enter_page/register', {
+            const response = await fetch('http://localhost:8080/api/enter_page/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password, email }),
@@ -39,6 +39,7 @@ const EnterPageRegister = () => {
 
             const data = await response.json();
             console.log('Registration successful:', data);
+            navigate('/main_page');
         } catch (error) {
             console.error('Error during fetch:', error.message);
             setErrorMessage(error.message); // Устанавливаем сообщение об ошибке

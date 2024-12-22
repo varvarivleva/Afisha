@@ -1,17 +1,19 @@
 ﻿import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Authorization.css'; // Подключаем CSS для стилизации
 
 const Authorization = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(''); // Состояние для хранения сообщения об ошибке
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setErrorMessage(''); // Сбрасываем сообщение об ошибке перед новым запросом
 
         try {
-            const response = await fetch('http://localhost:5000/api/enter_page/authorization', {
+            const response = await fetch('http://localhost:8080/api/enter_page/authorization', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),
@@ -42,6 +44,7 @@ const Authorization = () => {
             }
 
             console.log('Успешная авторизация:', responseData);
+            navigate('/main_page');
         } catch (error) {
             console.error('Ошибка авторизации:', error.message);
             setErrorMessage(error.message); // Устанавливаем сообщение об ошибке

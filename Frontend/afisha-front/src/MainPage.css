@@ -1,0 +1,112 @@
+/* Основной фон страницы */
+.main-page {
+    background-color: #fff7b3; /* Желтый фон */
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Верхняя плашка */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #b3ffd9; /* Зеленая плашка */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+    .header button {
+        background-color: #add8e6; /* Голубые кнопки */
+        color: black;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .header button:hover {
+            background-color: #87ceeb; /* Более насыщенный голубой при наведении */
+        }
+
+/* Основное содержимое */
+.main-content {
+    padding: 100px 20px 20px;
+    text-align: center;
+}
+
+    .main-content h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 20px;
+    }
+
+/* Список событий */
+.events-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Карточка события */
+.event-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+    .event-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .event-card h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .event-card p {
+        font-size: 14px;
+        color: gray;
+        margin: 5px 0;
+    }
+
+    .event-card .event-date {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .event-card .event-time {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 14px;
+        color: black;
+        font-weight: bold;
+    }
+
+/* Если событий нет */
+.no-events {
+    font-size: 18px;
+    color: gray;
+    margin-top: 50px;
+}
