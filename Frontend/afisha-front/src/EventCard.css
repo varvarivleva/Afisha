@@ -1,27 +1,31 @@
 /* Основная страница */
 .event-card-page {
     font-family: Arial, sans-serif;
+    background-color: #fff2cc;
+    min-height: 100vh;
 }
 
 /* Верхняя панель */
 .header {
-    background-color: #b3e6cc;
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.header button {
-    background-color: #66d9e8;
-    color: black;
-    border: none;
-    margin-left: 10px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.header button:hover {
-    background-color: #4cb8c4;
+    .header {
+        background-color: #b3e6cc;
+        padding: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .header button {
+        background-color: #66d9e8;
+        color: black;
+        border: none;
+        margin-left: 10px;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+    
+    .header button:hover {
+        background-color: #4cb8c4;
+    }
 }
 
 /* Блок информации о событии */

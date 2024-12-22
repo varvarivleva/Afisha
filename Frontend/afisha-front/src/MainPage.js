@@ -63,11 +63,14 @@ const MainPage = () => {
     return (
         <div className="main-page">
             <div className="header">
-                <button onClick={() => navigate('/my_bookings')}>Я посещаю</button>
-                <button onClick={() => navigate('/my_events')}>Я организую</button>
-                <button onClick={() => navigate('/create_event')}>+Создать событие</button>
-                <button onClick={logout}>Выйти</button> {/* Кнопка выхода */}
-            </div>
+                <div className="header-left" onClick={() => navigate('/main_page')}>ashay tunchik</div>
+                <div className="header-buttons">
+                    <button onClick={() => navigate('/my_bookings')}>Я посещаю</button>
+                    <button onClick={() => navigate('/my_events')}>Я организую</button>
+                    <button onClick={() => navigate('/create_event')}>+Создать событие</button>
+                    <button onClick={() => logout()}>Выйти</button>
+                </div>
+                </div>
             <div className="main-content">
                 <h1>ХАЙП НАЧИНАЕТСЯ ЗДЕСЬ! РЕГИСТРИРУЙТЕСЬ НА СОБЫТИЯ И БУДЬТЕ ХАЙПОРОЖАМИ</h1>
                 <div className="events-list">

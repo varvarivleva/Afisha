@@ -102,12 +102,15 @@ const EventCard = () => {
 
     return (
         <div className="event-card-page">
-            <div className="header">
-                <button onClick={() => navigate('/my_bookings')}>Я посещаю</button>
-                <button onClick={() => navigate('/my_events')}>Я организую</button>
-                <button onClick={() => navigate('/create_event')}>+Создать событие</button>
-                <button onClick={() => logout()}>Выйти</button>
-            </div>
+           <div className="header">
+                <div className="header-left" onClick={() => navigate('/main_page')}>ashay tunchik</div>
+                <div className="header-buttons">
+                    <button onClick={() => navigate('/my_bookings')}>Я посещаю</button>
+                    <button onClick={() => navigate('/my_events')}>Я организую</button>
+                    <button onClick={() => navigate('/create_event')}>+Создать событие</button>
+                    <button onClick={() => logout()}>Выйти</button>
+                </div>
+                </div>
             <div className="event-details">
                 <h1>{event.title}</h1>
                 <p className="event-description">{event.description}</p>

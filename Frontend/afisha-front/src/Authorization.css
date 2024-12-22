@@ -1,13 +1,13 @@
-/* Центрирование страницы */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    min-height: 90vh;
     background-color: #e0e0e0;
 }
 
-/* Оформление карточки */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .auth-card {
     background: white;
     padding: 20px;
@@ -17,14 +17,14 @@
     text-align: center;
 }
 
-    /* Заголовок */
+    /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     .auth-card h2 {
         margin-bottom: 20px;
         font-size: 1.5em;
         color: #333;
     }
 
-    /* Поля ввода */
+    /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
     .auth-card input {
         width: 90%;
         padding: 10px;
@@ -34,12 +34,12 @@
         font-size: 1em;
     }
 
-/* Кнопка входа */
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
 .auth-button {
     width: 100%;
     padding: 10px;
     background-color: #00bcd4;
-    color: white;
+    color: #e0e0e0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -51,22 +51,22 @@
         background-color: #0097a7;
     }
 
-/* Всплывающее сообщение об ошибке */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 .error-popup {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #f44336; /* Красный цвет */
+    background-color: #f44336; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     font-size: 1em;
-    animation: fadeInOut 5s forwards; /* Анимация появления и исчезновения */
+    animation: fadeInOut 5s forwards; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
     z-index: 9999;
 }
 
-/* Анимация для всплывающего сообщения */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 @keyframes fadeInOut {
     0% {
         opacity: 0;
