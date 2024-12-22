@@ -1,0 +1,97 @@
+.create-event-page {
+    background-color: #fff9c4;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.header {
+    background-color: #b2dfdb;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-buttons button {
+    background-color: #4dd0e1;
+    border: none;
+    color: #000;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-buttons button:hover {
+    background-color: #26c6da;
+    color: #fff;
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.event-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.event-form input,
+.event-form textarea,
+.event-form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.event-form input,
+.event-form textarea {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.event-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.event-form button {
+    background-color: #4dd0e1;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.event-form button:hover {
+    background-color: #26c6da;
+    color: #fff;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

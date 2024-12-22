@@ -4,7 +4,9 @@ import EnterPageRegister from './EnterPage.js';
 import Authorization from './Authorizaton.js';
 import MainPage from './MainPage.js';
 import EventCard from './EventCard.js';
-import MyEvent from './EventOrganization.js';
+import MyEvents from './EventOrganization.js';
+import MyBookings from './EventBooking.js';
+import CreateEvent from './CreateEvent.js';
 import { AuthProvider, useAuth } from './AuthContext.js';
 import './App.css';
 
@@ -31,7 +33,15 @@ function App() {
                         />
                         <Route
                             path="/my_events"
-                            element={<ProtectedRoute><MyEvent /></ProtectedRoute>}
+                            element={<ProtectedRoute><MyEvents /></ProtectedRoute>}
+                        />
+                        <Route
+                            path="/my_bookings"
+                            element={<ProtectedRoute><MyBookings /></ProtectedRoute>}
+                        />
+                        <Route
+                            path="/create_event"
+                            element={<ProtectedRoute><CreateEvent /></ProtectedRoute>}
                         />
                     </Routes>
                 </div>

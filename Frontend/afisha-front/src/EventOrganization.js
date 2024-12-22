@@ -50,7 +50,7 @@ const EventOrganization = () => {
                     <button onClick={() => navigate('/my_bookings')}>Я посещаю</button>
                     <button onClick={() => navigate('/my_events')}>Я организую</button>
                     <button onClick={() => navigate('/create_event')}>+Создать событие</button>
-                    <button onClick={() => navigate('/account')}>акк</button>
+                    <button onClick={() => logout()}>Выйти</button>
                 </div>
             </div>
             <div className="main-content">
