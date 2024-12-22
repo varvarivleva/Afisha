@@ -3,8 +3,12 @@
     "",
     "\\Backend",
     "\\Backend\\AfishaApi",
-    "\\Backend\\AfishaApi\\AfishaApi"
+    "\\Backend\\AfishaApi\\AfishaApi",
+    "\\Backend\\AfishaApi\\AfishaApi\\Properties",
+    "\\Frontend",
+    "\\Frontend\\afisha-front",
+    "\\Frontend\\afisha-front\\src"
   ],
-  "SelectedNode": "\\Backend\\AfishaApi\\AfishaApi\\Program.cs",
+  "SelectedNode": "\\Backend\\AfishaApi\\AfishaApi.sln",
   "PreviewInSolutionExplorer": false
 }
