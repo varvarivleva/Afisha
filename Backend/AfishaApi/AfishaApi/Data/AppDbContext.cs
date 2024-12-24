@@ -16,9 +16,6 @@ namespace AfishaApi.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           // modelBuilder.Entity<UserEntityDb>()
-               // .HasKey(u => u.Id);
-            // Здесь вы можете также добавить другие настройки для вашей модели
         }
 
     }

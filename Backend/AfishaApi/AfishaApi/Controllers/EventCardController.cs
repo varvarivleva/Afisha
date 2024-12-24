@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AfishaApi.Controllers
 {
-    [Authorize] // Требуется авторизация для всех методов
+    [Authorize]
     [ApiController]
     [Route("api/event_card")]
     public class EventCardController : ControllerBase
@@ -22,121 +22,159 @@ namespace AfishaApi.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Вывод информации карточки события
+        /// </summary>
         [HttpGet("show_info/{eventId}")]
-        [ProducesResponseType(typeof(EventInfoDto), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)] // Добавляем 401
+        [ProducesResponseType<EventInfoDto>(StatusCodes.Status200OK)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status404NotFound)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> ShowInfo(Guid eventId)
         {
-            if (eventId == null)
+            try
             {
-                return BadRequest(new { Message = "No eventId." });
+                var organizatorIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id");
+                if (organizatorIdClaim == null || !Guid.TryParse(organizatorIdClaim.Value, out var organizatorId))
+                {
+                    return Unauthorized(new BaseResponseDto { StatusCode = StatusCodes.Status401Unauthorized, Message = "Invalid auth token." });
+                }
+
+                if (eventId == null)
+                {
+                    return BadRequest(new BaseResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "Enter valid EventId." });
+                }
+
+                var eventInfo = await _context.Events.FindAsync(eventId);
+                if (eventInfo == null)
+                {
+                    return NotFound(new BaseResponseDto { StatusCode=StatusCodes.Status404NotFound, Message = "Event not found." });
+                }
+
+                return Ok(new EventInfoDto
+                {
+                    Title = eventInfo.Title,
+                    Description = eventInfo.Description,
+                    EventTime = eventInfo.EventTime,
+                    Venue = eventInfo.Venue,
+                    TicketsAvailable = eventInfo.TicketsAvailable,
+                    TicketPrice = eventInfo.TicketPrice
+                });
             }
-            var eventInfo = await _context.Events.FindAsync(eventId);
-            if (eventInfo == null)
+            catch (Exception ex)
             {
-                return NotFound(new { Message = "Event not found." });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
             }
-            return Ok(new EventInfoDto
-            {
-                Title = eventInfo.Title,
-                Description = eventInfo.Description,
-                EventTime = eventInfo.EventTime,
-                Venue = eventInfo.Venue,
-                TicketsAvailable = eventInfo.TicketsAvailable,
-                TicketPrice = eventInfo.TicketPrice
-            });
         }
 
+        /// <summary>
+        /// Создание собятия
+        /// </summary>
         [HttpPost("create_event")]
-        [ProducesResponseType(typeof(EventResponseDto), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)] // Добавляем 401
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status200OK)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> CreateEvent([FromBody] CreateEventDto request)
         {
-            if (string.IsNullOrWhiteSpace(request.Title) ||
-                string.IsNullOrWhiteSpace(request.Description) ||
-                request.EventTime == DateTime.MinValue ||
-                string.IsNullOrWhiteSpace(request.Venue) ||
-                request.TicketsAvailable <= 0 ||
-                request.TicketPrice <= 0)
+            try
             {
-                return BadRequest(new { Message = "All fields are required." });
+                var organizatorIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id");
+                if (organizatorIdClaim == null || !Guid.TryParse(organizatorIdClaim.Value, out var organizatorId))
+                {
+                    return Unauthorized(new BaseResponseDto { StatusCode = StatusCodes.Status401Unauthorized, Message = "Invalid auth token." });
+                }
+
+                if (string.IsNullOrWhiteSpace(request.Title) ||
+                    string.IsNullOrWhiteSpace(request.Description) ||
+                    request.EventTime == DateTime.MinValue ||
+                    string.IsNullOrWhiteSpace(request.Venue) ||
+                    request.TicketsAvailable <= 0 ||
+                    request.TicketPrice<=0)
+                {
+                    return BadRequest(new BaseResponseDto { StatusCode=StatusCodes.Status400BadRequest, Message = "All fields are required." });
+                }
+
+                var newEvent = new EventEntityDb
+                {
+                    Id = Guid.NewGuid(),
+                    OrganizatorId = organizatorId,
+                    Title = request.Title,
+                    Description = request.Description,
+                    EventTime = request.EventTime,
+                    Venue = request.Venue,
+                    TicketsAvailable = request.TicketsAvailable,
+                    TicketPrice = request.TicketPrice
+                };
+
+                _context.Events.Add(newEvent);
+                await _context.SaveChangesAsync();
+
+                return Ok(new BaseResponseDto { StatusCode=StatusCodes.Status200OK, Message = "Event created successfully." });
             }
-
-            var organizatorIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id"); // Предполагается, что токен содержит claim с типом "id"
-            if (organizatorIdClaim == null || !Guid.TryParse(organizatorIdClaim.Value, out var organizatorId))
+            catch (Exception ex)
             {
-                return Unauthorized(new { Message = "Invalid token or organizator ID not found." });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
             }
-
-            var newEvent = new EventEntityDb
-            {
-                Id = Guid.NewGuid(),
-                OrganizatorId = organizatorId,
-                Title = request.Title,
-                Description = request.Description,
-                EventTime = request.EventTime,
-                Venue = request.Venue,
-                TicketsAvailable = request.TicketsAvailable,
-                TicketPrice = request.TicketPrice
-            };
-
-            _context.Events.Add(newEvent);
-            await _context.SaveChangesAsync();
-
-            return Ok(new EventResponseDto { Message = "Event created successfully." });
         }
 
+        /// <summary>
+        /// Создание бронирования
+        /// </summary>
         [HttpPost("booking")]
-        [ProducesResponseType(typeof(BookingResponseDto), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)] // Добавляем 401
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status200OK)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Booking([FromBody] BookingRequestDto request)
         {
-            if (string.IsNullOrWhiteSpace(request.FirstName) ||
-                string.IsNullOrWhiteSpace(request.LastName) ||
-                string.IsNullOrWhiteSpace(request.Phone) ||
-                request.EventId == Guid.Empty)
+            try
             {
-                return BadRequest(new { Message = "All fields are required." });
+                var uesrIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id");
+                if (uesrIdClaim == null || !Guid.TryParse(uesrIdClaim.Value, out var userId))
+                {
+                    return Unauthorized(new BaseResponseDto { StatusCode = StatusCodes.Status401Unauthorized, Message = "Invalid auth token." });
+                }
+
+                if (string.IsNullOrWhiteSpace(request.FirstName) ||
+                    string.IsNullOrWhiteSpace(request.LastName) ||
+                    string.IsNullOrWhiteSpace(request.Phone) ||
+                    request.EventId == Guid.Empty)
+                {
+                    return BadRequest(new BaseResponseDto { StatusCode=StatusCodes.Status400BadRequest, Message = "All fields are required." });
+                }
+
+                var eventInfo = await _context.Events.FindAsync(request.EventId);
+                if (eventInfo == null || eventInfo.TicketsAvailable <= 0)
+                {
+                    return NotFound(new BaseResponseDto { StatusCode=StatusCodes.Status404NotFound, Message = "Event not found or no tickets available." });
+                }
+
+                var booking = new BookingEntityDb
+                {
+                    Id = Guid.NewGuid(),
+                    UserId = userId,
+                    EventId = request.EventId,
+                    BookingTime = DateTime.UtcNow,
+                    Status = "success",
+                    FirstName = request.FirstName,
+                    LastName = request.LastName,
+                    Phone = request.Phone
+                };
+
+                eventInfo.TicketsAvailable -= 1;
+                _context.Events.Update(eventInfo);
+                _context.Bookings.Add(booking);
+                await _context.SaveChangesAsync();
+
+                return Ok(new BaseResponseDto { StatusCode=StatusCodes.Status200OK, Message = "Booking completed successfully." });
             }
-
-            var eventInfo = await _context.Events.FindAsync(request.EventId);
-            if (eventInfo == null || eventInfo.TicketsAvailable <= 0)
+            catch (Exception ex)
             {
-                return NotFound(new { Message = "Event not found or no tickets available." });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
             }
-
-            var uesrIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id"); // Предполагается, что токен содержит claim с типом "id"
-            if (uesrIdClaim == null || !Guid.TryParse(uesrIdClaim.Value, out var userId))
-            {
-                return Unauthorized(new { Message = "Invalid token or organizator ID not found." });
-            }
-
-            var booking = new BookingEntityDb
-            {
-                Id = Guid.NewGuid(),
-                UserId = userId,
-                EventId = request.EventId,
-                BookingTime = DateTime.UtcNow,
-                Status = "success",
-                FirstName = request.FirstName,
-                LastName = request.LastName,
-                Phone = request.Phone
-            };
-
-            eventInfo.TicketsAvailable -= 1;
-            _context.Events.Update(eventInfo);
-            _context.Bookings.Add(booking);
-            await _context.SaveChangesAsync();
-
-            return Ok(new BookingResponseDto { Message = "Booking completed successfully." });
         }
     }
 }

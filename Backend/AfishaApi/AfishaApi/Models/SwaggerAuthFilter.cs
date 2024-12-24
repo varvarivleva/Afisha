@@ -1,25 +1,28 @@
 ﻿using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-public class AddAuthHeaderOperationFilter : IOperationFilter
+namespace AfishaApi.Models
 {
-    public void Apply(OpenApiOperation operation, OperationFilterContext context)
+    public class AddAuthHeaderOperationFilter : IOperationFilter
     {
-        if (operation.Security == null)
-            operation.Security = new List<OpenApiSecurityRequirement>();
-
-        var securityScheme = new OpenApiSecurityScheme
+        public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
-            Reference = new OpenApiReference
+            if (operation.Security == null)
+                operation.Security = new List<OpenApiSecurityRequirement>();
+
+            var securityScheme = new OpenApiSecurityScheme
             {
-                Type = ReferenceType.SecurityScheme,
-                Id = "Bearer"
-            }
-        };
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            };
 
-        operation.Security.Add(new OpenApiSecurityRequirement
-        {
-            [securityScheme] = new string[] { }
-        });
+            operation.Security.Add(new OpenApiSecurityRequirement
+            {
+                [securityScheme] = new string[] { }
+            });
+        }
     }
 }

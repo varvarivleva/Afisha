@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace AfishaApi.Models
+﻿namespace AfishaApi.Data
 {
     public class UserEntityDb
     {

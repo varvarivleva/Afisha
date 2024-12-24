@@ -89,13 +89,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "BookingRequestDto",
+        "Type": "AfishaApi.Contracts.BookingRequestDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "BookingResponseDto",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -104,7 +104,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -113,7 +113,7 @@
         "StatusCode": 400
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -122,7 +122,7 @@
         "StatusCode": 401
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -147,13 +147,13 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "CreateEventDto",
+        "Type": "AfishaApi.Contracts.CreateEventDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "EventResponseDto",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -162,7 +162,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -171,7 +171,7 @@
         "StatusCode": 400
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -202,7 +202,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EventInfoDto",
+        "Type": "AfishaApi.Contracts.EventInfoDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -211,7 +211,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -220,7 +220,7 @@
         "StatusCode": 400
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -229,7 +229,7 @@
         "StatusCode": 404
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -254,7 +254,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ShowAllEventsDto, AfishaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AfishaApi.Contracts.ShowAllEventsDto, AfishaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -263,7 +263,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -272,8 +272,12 @@
         "StatusCode": 401
       },
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 500
       }
     ]
@@ -297,7 +301,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -331,7 +335,7 @@
         "StatusCode": 200
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "AfishaApi.Contracts.BaseResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -23,72 +23,91 @@ namespace AfishaApi.Controllers
         {
             _context = context;
         }
-
+        /// <summary>
+        /// Регистрация пользователя
+        /// </summary>
         [HttpPost("register")]
         [ProducesResponseType<EnterPageResponseDto>(StatusCodes.Status200OK)]
         [ProducesResponseType<EnterPageResponseDto>(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> RegisterAsync([FromBody] RegisterRequestDto? request)
         {
-            if (string.IsNullOrWhiteSpace(request.Username) ||
-                string.IsNullOrWhiteSpace(request.Password) ||
-                string.IsNullOrWhiteSpace(request.Email))
+            try
             {
-                return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "All fields are required" });
-            }
-
-            using (_context)
-            {
-                var existingUser = await _context.Users
-                    .FirstOrDefaultAsync(u => u.Username == request.Username);
-
-                if (existingUser != null)
+                if (string.IsNullOrWhiteSpace(request.Username) ||
+                    string.IsNullOrWhiteSpace(request.Password) ||
+                    string.IsNullOrWhiteSpace(request.Email))
                 {
-                    return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "User already exists" });
+                    return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "All fields are required" });
                 }
 
-                var newUser = new UserEntityDb
+                using (_context)
                 {
-                    Id = Guid.NewGuid(),
-                    Username = request.Username,
-                    Password = request.Password, // Не забудьте использовать хеширование пароля
-                    Email = request.Email
-                };
+                    var existingUser = await _context.Users
+                        .FirstOrDefaultAsync(u => u.Username == request.Username);
 
-                _context.Users.Add(newUser);
-                await _context.SaveChangesAsync();
+                    if (existingUser != null)
+                    {
+                        return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "User already exists" });
+                    }
+
+                    var newUser = new UserEntityDb
+                    {
+                        Id = Guid.NewGuid(),
+                        Username = request.Username,
+                        Password = request.Password,
+                        Email = request.Email
+                    };
+
+                    _context.Users.Add(newUser);
+                    await _context.SaveChangesAsync();
+                }
+
+                return Ok(new EnterPageResponseDto { StatusCode = StatusCodes.Status200OK, Message = "User created" });
             }
-
-            return Ok(new EnterPageResponseDto { StatusCode = StatusCodes.Status200OK, Message = "User created" });
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
+            }
         }
 
+        /// <summary>
+        /// Авторизация пользователя
+        /// </summary>
         [HttpPost("authorization")]
         [ProducesResponseType<EnterPageResponseDto>(StatusCodes.Status200OK)]
         [ProducesResponseType<EnterPageResponseDto>(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> AuthAsync([FromBody] AuthorizationRequestDto? request)
         {
-            if (string.IsNullOrWhiteSpace(request.Username) ||
-                string.IsNullOrWhiteSpace(request.Password))
+            try
             {
-                return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "All fields are required" });
+                if (string.IsNullOrWhiteSpace(request.Username) ||
+                    string.IsNullOrWhiteSpace(request.Password))
+                {
+                    return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "All fields are required" });
+                }
+
+                var user = await _context.Users
+                    .FirstOrDefaultAsync(u => u.Username == request.Username);
+
+                if (user == null)
+                {
+                    return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "Invalid username" });
+                }
+                if (request.Password != user.Password)
+                {
+                    return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "Invalid password" });
+                }
+
+                var token = GenerateToken(user);
+
+                return Ok(new EnterPageResponseDto { StatusCode = StatusCodes.Status200OK, Message = "Access granted", Token = token });
             }
-
-            var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.Username == request.Username);
-
-            if (user == null)
+            catch (Exception ex)
             {
-                return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "Invalid username" });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
             }
-            if (request.Password != user.Password)
-            {
-                return BadRequest(new EnterPageResponseDto { StatusCode = StatusCodes.Status400BadRequest, Message = "Invalid password" });
-            }
-
-            var token = GenerateToken(user);
-
-            return Ok(new EnterPageResponseDto { StatusCode = StatusCodes.Status200OK, Message = "Access granted", Token = token });
         }
 
         private string GenerateToken(UserEntityDb user)

@@ -12,7 +12,7 @@ using AfishaApi.Contracts;
 
 namespace AfishaApi.Controllers
 {
-    [Authorize] // Требуется авторизация для всех методов
+    [Authorize]
     [ApiController]
     [Route("api/my_events")]
     public class MyEventsController : ControllerBase
@@ -28,62 +28,76 @@ namespace AfishaApi.Controllers
         /// Получить список мероприятий, организованных текущим пользователем.
         /// </summary>
         [HttpGet("organization")]
-        [ProducesResponseType(typeof(IEnumerable<OrganizationEventDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType<IEnumerable<OrganizationEventDto>>(StatusCodes.Status200OK)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetOrganizedEvents()
         {
-            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id");
-            if (userIdClaim == null)
+            try
             {
-                return Unauthorized(new { Message = "User ID not found in token." });
-            }
-
-            var userId = Guid.Parse(userIdClaim.Value); // Получаем ID пользователя из токена
-
-            var events = await _context.Events
-                .Where(e => e.OrganizatorId == userId) // Предполагается, что в модели есть поле OrganizerId
-                .Select(e => new OrganizationEventDto
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id");
+                if (userIdClaim == null)
                 {
-                    Id = e.Id,
-                    Title = e.Title,
-                    EventTime = e.EventTime,
-                    TicketsAvailable = e.TicketsAvailable
-                })
-                .ToListAsync();
+                    return Unauthorized(new BaseResponseDto { StatusCode=StatusCodes.Status401Unauthorized, Message = "Invalid auth token." });
+                }
 
-            return Ok(events);
+                var userId = Guid.Parse(userIdClaim.Value);
+
+                var events = await _context.Events
+                    .Where(e => e.OrganizatorId == userId) 
+                    .Select(e => new OrganizationEventDto
+                    {
+                        Id = e.Id,
+                        Title = e.Title,
+                        EventTime = e.EventTime,
+                        TicketsAvailable = e.TicketsAvailable
+                    })
+                    .ToListAsync();
+
+                return Ok(events);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
+            }
         }
 
         /// <summary>
         /// Получить список мероприятий, которые забронированы текущим пользователем.
         /// </summary>
         [HttpGet("bookings")]
-        [ProducesResponseType(typeof(IEnumerable<BookingEventDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType<IEnumerable<BookingEventDto>>(StatusCodes.Status200OK)]
+        [ProducesResponseType<BaseResponseDto>(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetBookings()
         {
-            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id");
-            if (userIdClaim == null)
+            try
             {
-                return Unauthorized(new { Message = "User ID not found in token." });
-            }
-
-            var userId = Guid.Parse(userIdClaim.Value);// Получаем ID пользователя из токена
-
-            var bookings = await _context.Bookings
-                .Where(b => b.UserId == userId)
-                .Include(b => b.Event) // Предполагается, что у вас есть навигационное свойство Event в классе BookingEntityDb.
-                .Select(b => new BookingEventDto
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id");
+                if (userIdClaim == null)
                 {
-                    Id = b.EventId, // Получаем ID события из бронирования
-                    Title = b.Event.Title,
-                    EventTime = b.Event.EventTime
-                })
-                .ToListAsync();
+                    return Unauthorized(new BaseResponseDto { StatusCode = StatusCodes.Status401Unauthorized, Message = "Invalid auth token." });
+                }
 
-            return Ok(bookings);
+                var userId = Guid.Parse(userIdClaim.Value);
+
+                var bookings = await _context.Bookings
+                    .Where(b => b.UserId == userId)
+                    .Include(b => b.Event)
+                    .Select(b => new BookingEventDto
+                    {
+                        Id = b.EventId,
+                        Title = b.Event.Title,
+                        EventTime = b.Event.EventTime
+                    })
+                    .ToListAsync();
+
+                return Ok(bookings);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
+            }
         }
     }
 }

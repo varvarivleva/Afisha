@@ -22,7 +22,7 @@ namespace AfishaApi.Migrations
                     EventTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Venue = table.Column<string>(type: "text", nullable: false),
                     TicketsAvailable = table.Column<int>(type: "integer", nullable: false),
-                    TicketPrice = table.Column<decimal>(type: "numeric", nullable: false)
+                    TicketPrice = table.Column<decimal>(type: "decimal", nullable: false)
                 },
                 constraints: table =>
                 {
