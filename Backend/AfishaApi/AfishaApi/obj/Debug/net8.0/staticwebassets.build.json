@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "zkHPdypdoOwvMyGKm1jswpf523JSr8L2mwHiAYYwnNA=",
+  "Hash": "ZWkEVjc7uNPOfcRl36q1n6a17ej7KBqVqVPe6VGct1o=",
   "Source": "AfishaApi",
   "BasePath": "_content/AfishaApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

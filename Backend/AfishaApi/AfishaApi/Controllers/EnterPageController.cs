@@ -13,19 +13,31 @@ using System.Text;
 
 namespace AfishaApi.Controllers
 {
+    /// <summary>
+    ///  Класс для регистрации и авторизации пользователей в приложении.
+    ///  Строка идентификатора "T:AfishaApi.Controllers.EnterPageController".
+    /// </summary> 
     [ApiController]
     [Route("api/enter_page")]
     public class EnterPageController : ControllerBase
     {
         private readonly AppDbContext _context;
 
+        /// <summary>
+        /// Метод для вычисления.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EnterPageController.EnterPageController".
+        /// </summary>
         public EnterPageController(AppDbContext context)
         {
             _context = context;
         }
         /// <summary>
-        /// Регистрация пользователя
+        /// Метод для обработки запросов на регистрацию.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EnterPageController.RegisterAsync".
         /// </summary>
+        /// <param name="RegisterRequestDto">Запрос из контракта
+        /// .</param>
+        /// <returns>Значение, равное коду запроса.</returns>
         [HttpPost("register")]
         [ProducesResponseType<EnterPageResponseDto>(StatusCodes.Status200OK)]
         [ProducesResponseType<EnterPageResponseDto>(StatusCodes.Status400BadRequest)]
@@ -70,18 +82,19 @@ namespace AfishaApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
             }
         }
-
         /// <summary>
-        /// Авторизация пользователя
+        /// Метод для обработки запросов на авторизацию.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EnterPageController.AuthAsync".
         /// </summary>
+        /// <param name="AuthorizationRequestDto">Запрос из контракта
+        /// .</param>
+        /// <returns>Значение, равное коду запроса, и токен.</returns>
         [HttpPost("authorization")]
         [ProducesResponseType<EnterPageResponseDto>(StatusCodes.Status200OK)]
         [ProducesResponseType<EnterPageResponseDto>(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> AuthAsync([FromBody] AuthorizationRequestDto? request)
         {
-            try
-            {
                 if (string.IsNullOrWhiteSpace(request.Username) ||
                     string.IsNullOrWhiteSpace(request.Password))
                 {
@@ -103,13 +116,14 @@ namespace AfishaApi.Controllers
                 var token = GenerateToken(user);
 
                 return Ok(new EnterPageResponseDto { StatusCode = StatusCodes.Status200OK, Message = "Access granted", Token = token });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
-            }
         }
-
+        /// <summary>
+        /// Метод для генерации токенов.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EnterPageController.GenerateToken".
+        /// </summary>
+        /// <param name="user">Запрос из базы данных.
+        /// .</param>
+        /// <returns>Токен.</returns>
         private string GenerateToken(UserEntityDb user)
         {
             var claims = new[]

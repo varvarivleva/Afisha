@@ -10,6 +10,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AfishaApi.Controllers
 {
+    /// <summary>
+    ///  Класс для управления карточкой события.
+    ///  Строка идентификатора "T:AfishaApi.Controllers.EventCardController".
+    /// </summary> 
     [Authorize]
     [ApiController]
     [Route("api/event_card")]
@@ -17,14 +21,22 @@ namespace AfishaApi.Controllers
     {
         private readonly AppDbContext _context;
 
+        /// <summary>
+        /// Метод для вычисления.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EventCardController.EventCardController".
+        /// </summary>
         public EventCardController(AppDbContext context)
         {
             _context = context;
         }
 
         /// <summary>
-        /// Вывод информации карточки события
+        /// Метод для вывода информации карточки события.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EventCardController.ShowInfo".
         /// </summary>
+        /// <param name="eventId">Идентификатор события.
+        /// .</param>
+        /// <returns>Значение, равное коду статуса.</returns>
         [HttpGet("show_info/{eventId}")]
         [ProducesResponseType<EventInfoDto>(StatusCodes.Status200OK)]
         [ProducesResponseType<BaseResponseDto>(StatusCodes.Status400BadRequest)]
@@ -69,8 +81,12 @@ namespace AfishaApi.Controllers
         }
 
         /// <summary>
-        /// Создание собятия
+        /// Метод для создания события.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EventCardController.CreateEvent".
         /// </summary>
+        /// <param name="CreateEventDto">Запрос контракта.
+        /// .</param>
+        /// <returns>Значение, равное коду статуса.</returns>
         [HttpPost("create_event")]
         [ProducesResponseType<BaseResponseDto>(StatusCodes.Status200OK)]
         [ProducesResponseType<BaseResponseDto>(StatusCodes.Status400BadRequest)]
@@ -120,8 +136,12 @@ namespace AfishaApi.Controllers
         }
 
         /// <summary>
-        /// Создание бронирования
+        /// Метод для создания бронирования.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EventCardController.Booking".
         /// </summary>
+        /// <param name="BookingRequestDto">Запрос контракта.
+        /// .</param>
+        /// <returns>Значение, равное коду статуса.</returns>
         [HttpPost("booking")]
         [ProducesResponseType<BaseResponseDto>(StatusCodes.Status200OK)]
         [ProducesResponseType<BaseResponseDto>(StatusCodes.Status400BadRequest)]

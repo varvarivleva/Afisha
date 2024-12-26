@@ -12,6 +12,10 @@ using AfishaApi.Contracts;
 
 namespace AfishaApi.Controllers
 {
+    /// <summary>
+    ///  Класс для списка предстоящих событий.
+    ///  Строка идентификатора "T:AfishaApi.Controllers.MainPageController".
+    /// </summary> 
     [Authorize]
     [ApiController]
     [Route("api/main_page")]
@@ -19,14 +23,20 @@ namespace AfishaApi.Controllers
     {
         private readonly AppDbContext _context;
 
+        /// <summary>
+        /// Метод для вычисления.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EnterPageController.MainPageController".
+        /// </summary>
         public MainPageController(AppDbContext context)
         {
             _context = context;
         }
 
         /// <summary>
-        /// Получить весь список не прошедших мероприятий.
+        /// Метод для вывода непрошедших событий.
+        /// Строка идентификатора "M:AfishaApi.Controllers.MainPageController.GetAllEvents".
         /// </summary>
+        /// <returns>Значение, равное коду статуса.</returns>
         [HttpGet("show_events")]
         [ProducesResponseType<IEnumerable<ShowAllEventsDto>>(StatusCodes.Status200OK)]
         [ProducesResponseType<BaseResponseDto>(StatusCodes.Status401Unauthorized)]

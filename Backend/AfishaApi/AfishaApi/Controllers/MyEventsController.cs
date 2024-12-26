@@ -12,6 +12,10 @@ using AfishaApi.Contracts;
 
 namespace AfishaApi.Controllers
 {
+    /// <summary>
+    ///  Класс для списка организованных и посещаемых событий.
+    ///  Строка идентификатора "T:AfishaApi.Controllers.MyEventsController".
+    /// </summary> 
     [Authorize]
     [ApiController]
     [Route("api/my_events")]
@@ -19,14 +23,20 @@ namespace AfishaApi.Controllers
     {
         private readonly AppDbContext _context;
 
+        /// <summary>
+        /// Метод для вычисления.
+        /// Строка идентификатора "M:AfishaApi.Controllers.EnterPageController.EnterPageController".
+        /// </summary>
         public MyEventsController(AppDbContext context)
         {
             _context = context;
         }
 
         /// <summary>
-        /// Получить список мероприятий, организованных текущим пользователем.
+        /// Метод для вывода организуемых текущим пользователем событий.
+        /// Строка идентификатора "M:AfishaApi.Controllers.MainPageController.GetOrganizedEvents".
         /// </summary>
+        /// <returns>Значение, равное коду статуса.</returns>
         [HttpGet("organization")]
         [ProducesResponseType<IEnumerable<OrganizationEventDto>>(StatusCodes.Status200OK)]
         [ProducesResponseType<BaseResponseDto>(StatusCodes.Status401Unauthorized)]
@@ -63,8 +73,10 @@ namespace AfishaApi.Controllers
         }
 
         /// <summary>
-        /// Получить список мероприятий, которые забронированы текущим пользователем.
+        /// Метод для вывода забронированных текущим пользователем событий.
+        /// Строка идентификатора "M:AfishaApi.Controllers.MainPageController.GetBookings".
         /// </summary>
+        /// <returns>Значение, равное коду статуса.</returns>
         [HttpGet("bookings")]
         [ProducesResponseType<IEnumerable<BookingEventDto>>(StatusCodes.Status200OK)]
         [ProducesResponseType<BaseResponseDto>(StatusCodes.Status401Unauthorized)]
