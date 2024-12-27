@@ -45,7 +45,7 @@ const EventOrganization = () => {
     return (
         <div className="event-organization-page">
             <div className="header">
-            <div className="header-left" onClick={() => navigate('/main_page')}>ashay tunchik</div>
+            <div className="header-left" onClick={() => navigate('/main_page')}>AfishTunchik</div>
                 <div className="header-buttons">
                     <button onClick={() => navigate('/my_bookings')}>Я посещаю</button>
                     <button onClick={() => navigate('/my_events')}>Я организую</button>

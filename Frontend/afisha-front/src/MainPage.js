@@ -63,7 +63,7 @@ const MainPage = () => {
     return (
         <div className="main-page">
             <div className="header">
-                <div className="header-left" onClick={() => navigate('/main_page')}>ashay tunchik</div>
+                <div className="header-left" onClick={() => navigate('/main_page')}>AfishTunchik</div>
                 <div className="header-buttons">
                     <button onClick={() => navigate('/my_bookings')}>Я посещаю</button>
                     <button onClick={() => navigate('/my_events')}>Я организую</button>
@@ -72,7 +72,7 @@ const MainPage = () => {
                 </div>
                 </div>
             <div className="main-content">
-                <h1>ХАЙП НАЧИНАЕТСЯ ЗДЕСЬ! РЕГИСТРИРУЙТЕСЬ НА СОБЫТИЯ И БУДЬТЕ ХАЙПОРОЖАМИ</h1>
+                <h1>ЖИЗНЬ ПРОДОЛЖАЕТСЯ ЗДЕСЬ! ПОСЕЩАЙТЕ СОБЫТИЯ И ЖИВИТЕ ЛУЧШУЮ ЖИЗНЬ ВМЕСТЕ С AfishTunchik</h1>
                 <div className="events-list">
                     {loading && <p className="loading-message">Загрузка событий...</p>}
                     {error && <p className="error-message">Ошибка: {error}</p>}
@@ -92,7 +92,7 @@ const MainPage = () => {
                     ) : (
                         !loading &&
                         !error && (
-                            <p className="no-events">Событий пока нет. Будь первым, кто создат его!</p>
+                            <p className="no-events">Событий пока нет. Будьте первым, кто создат его!</p>
                         )
                     )}
                 </div>
